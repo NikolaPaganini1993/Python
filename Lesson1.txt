@@ -1,0 +1,366 @@
+1. Переменные:
+int - целые числа
+float - числа, с плавающей точкой
+boolean - логические цифры
+str, list - строки
+и другие...
+
+Пример записи:
+a = 123
+b = 1.23
+print(a)
+print(b)
+
+2. Чтобы узнать тип данных,
+добавляем к переменной type:
+print(type(a))
+print(type(b))
+print(type(value))
+
+3. Виды вывода чисел и строк:
+a = 123
+b = 1.23
+c = 'Hello World!!!'
+print(a, b, c)
+print(a, '-',b, '-',c)
+print('{} - {} - {}'.format(a, b, c))
+print('{1} - {2} - {0}'.format(a, b, c))
+print(f'{a} - {b} - {c}')
+
+f = True
+z = False
+print(f, z)
+
+4. Чтобы объявить массив:
+list = [1, 2, 3]
+list = ['1', '2', '3', 'hello']
+col = ['hello', 1, 2, 4.5, True]
+print(list)
+print(col)
+
+5. Ввод и вывод данных (print, input):
+print('Введите a')
+a = input()
+print('Введите b')
+b = input()
+print(a, b)
+print('{} {}'.format(a, b))
+print(f'{a} {b}')
+
+6. Чтобы работать с c целыми числами, а не сроками,
+нужно воспользоваться int:
+print('Введите a')
+a = int(input())
+print('Введите b')
+b = int(input())
+print(a, '+', b, '=', a + b)
+
+7. Чтобы работать с c дробными числами,
+нужно воспользоваться float:
+print('Введите a')
+a = float(input())
+print('Введите b')
+b = float(input())
+print(a, '+', b, '=', a + b)
+
+8. Арифметические операции
+(+, -, *, /, %, //, ** и другие)
+a = 5
+b = 2
+c = a + b
+d = a - b
+e = a * b
+f = a / b (обычное деление, с остатком)
+g = a // b (деление целых чисел, без остатка)
+h = a % b (находит остаток от деления)
+i = a ** b (число a возводится в степень b)
+print(c, d, e, f, g, h)
+
+9. Округление (round)
+a = 1.3
+b = 3
+c = round(a * b) (округляет по мат. правилам)
+print(c)
+
+a = 1.3123
+b = 3
+c = round(a * b, 3) (округляет на столько цифр,
+сколько укажешь, в данном случае - 3)
+print(c)
+
+10. Сокращенные операции присваивания:
+a = 3
+a += 5 (a = a + 5)
+print(a)
+
+11. Логические операции:
+>, >=, <, <=, ==, !=
+not, and, or - не путать с &, |, ^
+is, is not, in, not in
+gen
+
+a = 1 > 4
+print(a)
+Ответ: False
+
+a = 1 < 4
+print(a)
+Ответ: True
+
+a = 1 < 4 and 5 > 2
+print(a)
+Ответ: True
+
+a = 1 == 2
+print(a)
+Ответ: False
+
+a = 1 != 2
+print(a)
+Ответ: True
+
+a = 'qwerty'
+b = 'qwerty'
+print(a == b)
+Ответ: True
+
+a = 'qwerty1'
+b = 'qwerty'
+print(a == b)
+Ответ: False
+
+a = [1, 2]
+b = [1, 2]
+print(a == b)
+Ответ: True
+
+a = 1 < 3 < 5 < 10
+print(a)
+Ответ: True
+
+func = 1
+a = 3
+b = 5
+print(func<a>b)
+Ответ: False
+
+f = 1 > 2 or 4 < 6
+print(f)
+Ответ: True (т.к. команда or означает, что
+операция будет верной при правильности хотя бы
+одного утверждения)
+
+f = [1, 2, 3, 4]
+print(f)
+print(2 in f)
+Ответ: True (оператор in, показывает если ли
+в заданном массиве, цифра, которую мы указали,
+в данном случае 2)
+
+f = [1, 2, 3, 4]
+print(f)
+print(not 2 in f)
+Ответ: False
+
+f = [1, 2, 3, 4]
+is_odd = not f[1] % 2
+print(is_odd)
+Ответ: True (проверяем является ли число из массива
+четным, так как в данном случае f[1] = 2,
+поэтому это логическая операция будет верной)
+
+12. Управляющие конструкции if, else:
+if condition:
+    #operator 1
+    #operator 2
+    #operator n
+else:
+    #operator n+1
+    #operator n+2
+    #operator n+m
+
+Пример:
+username = input('Введите имя: ')
+if(username == 'Маша'):
+    print('Ура, это же Маша!')
+else:
+    print('Привет,',username)
+
+a = int(input('a = '))
+b = int(input('b = '))
+if a > b:
+    print(a)
+else:
+    print(b)
+
+13. Управляющие конструкции if, if-else:
+if condition:
+    #operator
+elif condition2:
+    #operator
+elif condition3:
+    #operator
+else:
+    #operator
+
+Пример:
+username = input('Введите имя: ')
+if username == 'Маша':
+    print('Ура, это же Маша!')
+elif username == 'Марина':
+    print('Это же МАРИНААА!')
+elif username == 'Коля':
+    print('Здравствуй, хазяин!')
+else:
+    print('Привет,',username)
+
+14. Управляющие конструкции while(цикл):
+while condition:
+    #operator 1
+    #operator 2
+    #operator n
+
+Пример:
+original = 23
+inverted = 0
+while original != 0:
+    inverted = inverted * 10 + (original % 10)
+    original //= 10
+print(inverted)
+
+while condition:
+    #operator 1
+    #operator 2
+    #operator n
+else:
+    #operator n+1
+    #operator n+2
+    #operator n+m
+
+Пример:
+original = 23
+inverted = 0
+while original != 0:
+    inverted = inverted * 10 + (original % 10)
+    original //= 10
+else:
+    print('Пожалуй')
+    print('Хватит')
+print(inverted)
+
+15. Управляющие конструкции for:
+for i in enumeration:
+    #operator 1
+    #operator 2
+    #operator n
+
+Пример:
+for i in 1, 2, 3, 4, 5:
+    print(i**2)
+
+list = [1, 2, 3, 4, 5]
+for i in list:
+    print(i**2)
+
+16. Range - генерирует числа от 0 до указанного числа,
+в данном случае до 10)
+
+r = range(10)
+for i in r:
+    print(i)
+
+Также при помощи оператора range можно указавать от
+какого числа идет отсчет, до какого числа, и
+с какой шаг будет между ними)
+
+Пример:
+r = range(2, 10, 2)
+for i in r:
+    print(i)
+
+17. Оператор for можно использовать не только для чисел,
+но я для строк.
+Пример:
+for i in 'qwerty':
+    print(i)
+
+18. Немного о строках:
+text = 'съешь еще этих мягих французских булок'
+print(len(text))
+(показывает сколько символов в тексте)
+print('еще' in text)
+(показывает наличие заданных символов в тексте)
+print(text.isdigit())
+(проверяет являются ли все символы в тескте цифрами)
+print(text.islower())
+(проверяет являются ли все символы, символами
+нижнего регистра)
+print(text.replace('еще', 'ЕЩЕ'))
+(заменяет все символы в тексте, на заданные нами)
+print(text[0])
+(показывает первый символ текста)
+print(text[1])
+(показывает второй символ текста)
+print(text[len(text)-1])
+(показывает последний символ текста)
+print(text[-2])
+(показывает предпоследний символ текста)
+print(text[:])
+(показывает все символы текста,
+от 0 до последнего)
+print(text[:2])
+(показывает символы от 0-го до 2-го)
+print(text[2:5])
+(показывает символы от 2-го до 5-го)
+
+19. Оператор help подсказывает нам, что делает
+тот или иной оператор.
+Пример:
+help(str)
+help(print)
+help(input)
+
+20. Списки.
+Список - пронумерованная, изменяемая коллекция
+объектов произвольных типов.
+numbers = [1, 2, 3, 4, 5]
+print(numbers)
+numbers = list(range(1, 6))
+print(numbers)
+
+Мы можем присвоить новое значение любому элементу
+массива.
+numbers = [1, 2, 3, 4, 5]
+ran = range(1, 6)
+numbers[0] = 10
+print(numbers) #[10, 2, 3, 4, 5]
+
+Мы можем проводить любые математические операции
+с любым элементом массива и со всем разом.
+numbers = [1, 2, 3, 4, 5]
+for i in numbers:
+    i*=2
+    print(i) # [2, 4, 6, 8, 10]
+
+Команда print(len(numbers)) показывает количество
+символов в массиве.
+numbers = [1, 2, 3, 4, 5]
+print(len(numbers))
+Ответ: 5
+
+Команда numbers.append('Item') добавляет в массив
+новый элемент.
+colors =['Red', 'Green', 'Blue']
+print(colors) # Red Green Blue
+colors.append('Gray')
+print(colors) # Red Green Blue Gray
+
+Команда numbers.remove('Item') или del numbers[0]
+удаляет из массива элемент.
+colors =['Red', 'Green', 'Blue']
+colors.remove('Red')
+print(colors) # Green Blue
+
+21. Функции.
+Это фрагмент программы, используемый мнногократно
+def
