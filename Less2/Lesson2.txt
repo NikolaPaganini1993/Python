@@ -1,0 +1,190 @@
+Данные, функции и модули в python.
+
+1. Файлы.
+
+Хранение данных
+Передача данных в клиент-серверных проектах
+Хранение конфигов
+Логирование действий
+
+Как работать с файлами?
+
+Связать файловую переменную с файлом, определив
+модификатор работы.
+a - открытие для добавления данных
+r - открытие для чтения данных
+w - открытие для записи данных
+w+, r+
+Пример:
+1-ый вариант записи:
+colors = ['red', 'green', 'blue123']
+data = open('file.txt', 'a')
+data.writelines(colors)
+data.write('Line 12\n')
+data.write('Line 13\n')
+data.close()
+2-ой вариант записи:
+with open('file.txt', 'a') as data:
+    data.write('Line 111\n')
+    data.write('Line 222\n')
+
+2. Функции.
+
+Это фрагмент программы,используемый многократно.
+
+Пример записи функции и тело функции.
+def function_name(x):
+    # body line 1
+    ...
+    # body line n
+    # optional return
+
+Можно импортировать данные из другого файла:
+
+import __main__
+print(__main__.f(1))
+
+В python можно перемножать строки и числа:
+
+def new_string(symbol, count):
+    return symbol * count
+print(new_string('!', 5)) # !!!!!
+
+Можно count указать в самой функции:
+
+def new_string(symbol, count = 3):
+    return symbol * count
+print(new_string(4)) # 12
+
+Функция может передавать неограниченное количество
+аргументов:
+
+def concatenatio(*params):
+    res: str = ""
+    for item in params:
+        res += item
+    return res
+print(concatenatio('a', 's', 'd', 'w'))  #asdw
+print(concatenatio('a', '1', 'd', '2'))  #a1d2
+print(concatenatio(1, 2, 3, 4))          #TypeError: can only concatenate str (not "int") to str
+
+Эта функция завязана на выполнении операций со строками,
+если мы хотим работать с числами:
+
+def concatenatio(*params):
+    res: int = 0
+    for item in params:
+        res += item
+    return res
+print(concatenatio(1, 2, 3, 4)) # 10
+
+Рекурсия.
+Рекурсия - это функция, вызывающая сама себя. Главное при
+описании рекурсии - это указать, когда ей надо остановится
+и её перестать вызывать.
+
+def fib(n):                        #описали функцию, название функции и аргумент
+    if n in [1, 2]:                #если n находится в списке от 1 до 2
+        return 1                   #возвращаем единицу
+    else:                          #иначе
+        return fib(n-1) + fib(n-2) #возвращаем рекурсивный вызов для (n-1) и (n-2)
+list = []                          #создаём список
+for e in range(1, 10):             #обозначаем отрезок где будем смотреть функцию
+    list.append(fib(e))            #добавляем число
+print(list)                        #выводим результат
+
+Кортежи.
+Кортеж - это неизменяемый список
+
+a = (3, 4, 1, 21)
+print(a)
+print(a[0])
+print(a[-1])
+
+t = tuple(['red', 'green', 'blue'])
+print(t[0])
+print(t[2])
+print(t[-2])
+for e in t:
+    print(e)
+
+a = (3, 4, 1, 21)
+for item in a:
+    print(item)
+
+Мы можем распоковать кортеж в отдельные переменные.
+
+t = tuple(['red', 'green', 'blue'])
+red, green, blue = t
+print('r:{} g:{} b:{}'.format(red, green, blue))
+
+Словари.
+Неупорядочные коллекции произвольных объектов
+с доступом по ключу.
+
+dictionary = {}               #создаём словарь
+dictionary = \                #слэш ставится, чтобы не писать всё в одну строку
+    {
+        'up': 'верх',
+        'left': 'лево',
+        'down': 'право',
+        'right': 'низ'
+    }
+print(dictionary)
+print(dictionary['left'])
+for k in dictionary.keys():   #с помощью этой команды, мы можем вызвать все кейсы, которые есть в этом словаре
+    print(k)
+for v in dictionary:          #или так
+    print(v)
+for k in dictionary.values(): #с помощью этой команды, мы можем вызвать все значения кейсов, которые есть в этом словаре
+    print(k)
+for v in dictionary:
+    print(dictionary[v])      #или так
+
+Множества.
+Множества - содержат в себе уникальные элементы.
+
+colors = {'red', 'green', 'blue'}
+print(type(colors))
+print(colors)
+colors.add('gray')               #мы можем добавляет элементы в множество
+colors.add('red')                #если добавлять в множество элемент, который уже был, то ничего не изменится
+print(colors)
+colors.remove('red')             #мы можем удалять элемент из множества
+print(colors)
+colors.discard('blue')           #мы можем удалять значения из множества (это не вызовет ошибку, если нет такого, элемента, в отличии от оператора .remove())
+print(colors)
+colors.clear()                   #с помощью оператора .clear(), мы можем отчистить множество, и продолжить работать с пустым множеством)
+print(colors)
+
+a = {1, 2, 3, 5, 8}            #создаём первое множество
+b = {2, 5, 8, 13, 21}          #создаём второе множество
+c = a.copy()                   #копируем множество
+u = a.union(b)                 #объединяем два множества
+i = a.intersection(b)          #делаем пересечение множеств
+dl = a.difference(b)           #показывает разницу в двух множествах
+dr = b.difference(a)
+q = a \
+    .union(b) \
+    .difference(a.intersection(b))
+s = frozenset(a)               #создаёт из изменняемого множество, неизменяеммое, заморозка
+print(a)
+print(b)
+print(c)
+print(u)
+print(i)
+print(dl)
+print(dr)
+print(q)
+print(s)
+
+Списки.
+list1 = [1, 2, 3, 4, 5]
+list2 = list1
+list1[0] = 123
+list2[1] = 333
+for e in list1:
+    print(e)
+print()
+for e in list2:
+    print(e)
