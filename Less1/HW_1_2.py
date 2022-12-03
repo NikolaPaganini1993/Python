@@ -3,6 +3,7 @@
 #    Пример:
 #    6782 -> 23
 #    0,56 -> 11
+import random
 
 # number = float(input('Введите вещественное число N: '))
 # a = int(number)
@@ -21,17 +22,46 @@
 #     c = c * 10 - int(c * 10)
 # print('Сумма = ', summa)
 
+# number = input('Введите число: ')
+# summa = 0
+# for i in number:
+#     if i.isdigit(): #isdigit() проверяет цифра ли наш элемент
+#         summa += int(i)
+# print(summa)
+
+# from decimal import Decimal
+# number = Decimal(input('Введите число: '))
+# original = number
+# def sum_digits(number: int):
+#     summa = 0
+#     while number > 0:
+#         summa += number % 10
+#         number //= 10
+#     return summa
+# while (number != int(number)):
+#     number *= 10
+# summa = sum_digits(number)
+# print(f'Сумма цифр в числе {original} равна {int(sum_digits(number))}')
+
 # 2. Задайте список из n чисел последовательности (1 + 1/n)^n.
 #    Вывести в консоль сам список и сумму его элементов.
 
 # n = int(input('Введите число N: '))
-# my_list = []
+#
 # summa = 0
 # for i in range(1, n+1):
 #     my_list.append(f'{i}:{(1+1/i) ** i}')
 #     summa = summa + ((1+1/i) ** i)
 # print(my_list)
 # print(summa)
+
+# n = int(input('Введите число N: '))
+# my_list = []
+# for i in range(1, n + 1):
+#     my_list.append(round(((1 + 1 / i) ** i), 2))
+# print(my_list)
+# print(sum(my_list))
+
 
 # 3. Реализуйте алгоритм перемешивания списка.
 #    Встроенный алгоритм SHUFFLE не использовать! Реализовать свой метод
@@ -41,6 +71,10 @@
 # random.shuffle(my_list)
 # print(my_list)
 
+# my_list = [1, 2, 3, 4, 5, 6]
+# for i in range(len(my_list)):
+#     n = random.randint(0, (len(my_list) - 1))
+#     my_l
 # 4. Написать программу, которая состоит 4 из этапов:
 #    - создает список из рандомных четырехзначных чисел
 #    - принимает с консоли цифру и удаляет ее из всех элементов списка
@@ -83,3 +117,4 @@
 # print(text1)
 # string = input('Введите подстроку:')
 # print(text1.replace(string, ''))
+

@@ -36,14 +36,14 @@
 # else:
 #     print(False)
 
-list = ["qwe", "asd", "zxc", "qwe", "ertqwe"]
-string = "qwe"
-count = 0
-for i in range(len(list)):
-    if list[i] == string:
-        count += 1
-        if count == 2:
-            print(f'Второе вхождение элемента {string} на позиции {i}')
-            break
-else:
-    print('Вхождение подстроки - нет')
+# list = ["qwe", "asd", "zxc", "qwe", "ertqwe"]
+# string = "qwe"
+# count = 0
+# for i in range(len(list)):
+#     if list[i] == string:
+#         count += 1
+#         if count == 2:
+#             print(f'Второе вхождение элемента {string} на позиции {i}')
+#             break
+# else:
+#     print('Вхождение подстроки - нет')
