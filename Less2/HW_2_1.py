@@ -20,14 +20,14 @@
 #    [2, 3, 4, 5, 6] => [12, 15, 16]
 #    [2, 3, 5, 6] => [12, 15]
 
-text = input("Введите список чисел, разделенных пробелом: ").split()
-my_list = list(map(int, text))
-print(my_list)
-new_list = []
-for i in range(len(my_list) // 2):
-    mult = my_list[i] * my_list[len(my_list) - i - 1]
-    new_list.append(mult)
-print(new_list)
+# text = input("Введите список чисел, разделенных пробелом: ").split()
+# my_list = list(map(int, text))
+# print(my_list)
+# new_list = []
+# for i in range(len(my_list) // 2):
+#     mult = my_list[i] * my_list[len(my_list) - i - 1]
+#     new_list.append(mult)
+# print(new_list)
 
 # 3. Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным
 #    и минимальным значением дробной части элементов. (подробности в конце записи семинара).
