@@ -2,6 +2,15 @@
 #    сумму элементов списка, стоящих на нечётной позиции.
 #    Пример: [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 
+# import random
+# size = int(input('Введите размер списка: '))
+# my_list = [random.randint(-10, 10) for _ in range(size)]
+# print(my_list)
+# summa = 0
+# for i in range(1, len(my_list), 2):
+#     summa += my_list[i]
+# print(summa)
+
 # from random import randint
 # my_list = []
 # for i in range(5):
@@ -20,6 +29,19 @@
 #    [2, 3, 4, 5, 6] => [12, 15, 16]
 #    [2, 3, 5, 6] => [12, 15]
 
+# import random
+# size = int(input('Введите размер списка: '))
+# my_list =[random.randint(-10, 10) for _ in range(size)]
+# print(my_list)
+# if len(my_list) % 2 == 0:
+#     center = int(len(my_list) / 2)
+# else:
+#     center = int(len(my_list) / 2) + 1
+# new_list = []
+# for i in range(center):
+#     new_list.append(my_list[i] * my_list[-i])
+# print(new_list)
+
 # text = input("Введите список чисел, разделенных пробелом: ").split()
 # my_list = list(map(int, text))
 # print(my_list)
@@ -32,6 +54,15 @@
 # 3. Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным
 #    и минимальным значением дробной части элементов. (подробности в конце записи семинара).
 #    Пример: [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+
+# import random
+# size = int(input('Введите размер списка: '))
+# my_list =[round(random.uniform(0, 10), 2) for _ in range(size)]
+# print(my_list)
+# def devine(number: float) -> float:
+#     return round(number - int(number), 2)
+# my_list = list(map(devine, my_list))
+# print(max(my_list) - min(my_list))
 
 # import random
 # my_list = []
@@ -53,6 +84,13 @@
 #    3 -> 11
 #    2 -> 10
 
+# number = int(input('Введите число в десятичной системе: '))
+# bi_number = ''
+# while number > 0:
+#     bi_number = str(number % 2) + bi_number
+#     number //= 2
+# print(bi_number)
+
 # number = int(input('Введите число: '))
 # answer = ''
 # while number > 0:
@@ -62,6 +100,14 @@
 
 # 5. Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов (Негафибоначчи).
 #    Пример: для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
+
+# size = int(input('Введите размер последовательности: '))
+# fibo = [1, 0, 1]
+# for i in range(3, size + 3):
+#     fibo.append(fibo[i - 2] + fibo[i - 1])
+# for i in range(size):
+#     fibo.insert(0, fibo[1] - fibo[0])
+# print(fibo)
 
 # number = int(input('Введите число: '))
 # my_list = [-1, 1, 0, 1, 1]
@@ -80,3 +126,5 @@
 #     fib4 = fib_sum2
 #     my_list.insert(0, fib4)
 # print(my_list)
+
+
