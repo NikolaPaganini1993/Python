@@ -20,3 +20,4 @@
 # print(my_list)
 # uneven = [my_list[i] for i in range(len(my_list)) if i % 2 != 0]
 # print(sum(uneven))
+
