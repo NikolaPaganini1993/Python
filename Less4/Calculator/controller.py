@@ -1,4 +1,4 @@
-import model_sub as model
+import model_sum as model
 import view
 
 def button_click():
